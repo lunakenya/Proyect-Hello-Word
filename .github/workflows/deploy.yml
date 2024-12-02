@@ -31,9 +31,8 @@ jobs:
           exit 1
         fi
 
-        docker build -t your-dockerhub-username/hello-world:$TAG .
-        docker push your-dockerhub-username/hello-world:$TAG
-
+        docker build -t luna28kenya412/my-html-app .
+        docker push luna28kenya412/my-html-app
     - name: Deploy Docker Image to EC2 Instances
       run: |
         if [ "${{ github.ref_name }}" == "qa" ]; then
